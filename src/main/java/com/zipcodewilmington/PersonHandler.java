@@ -12,15 +12,25 @@ public class PersonHandler {
 
     public String whileLoop() {
         String result = "";
-        // create a `counter`
-        // while `counter` is less than length of array
+        int counter = 0;
+
+
+        while (counter < personArray.length) {
+            String currentPerson = personArray[counter].toString();
+            counter++;
+            result += currentPerson;
+
+            // create a `counter`
+            // while `counter` is less than length of array
             // begin loop
 
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
+            // use `counter` to identify the `current Person` in the array
+            // get `string Representation` of `currentPerson`
+            // append `stringRepresentation` to `result` variable
 
             // end loop
+
+        }
         return result;
     }
 
@@ -28,6 +38,11 @@ public class PersonHandler {
 
     public String forLoop() {
         String result = "";
+        for (int i =0; i < personArray.length; i++) {
+            String currentPerson = personArray[i].toString();
+            result += currentPerson;
+        }
+
         // identify initial value
         // identify terminal condition
         // identify increment
@@ -46,15 +61,18 @@ public class PersonHandler {
 
     public String forEachLoop() {
         String result = "";
-        // identify array's type
-        // identify array's variable-name
+        for(Person name : personArray) {
+            String currentPerson = name.toString();
+            result += currentPerson;
+            // identify array's type
+            // identify array's variable-name
 
-        // use the above discoveries to declare for-each-loop signature
+            // use the above discoveries to declare for-each-loop signature
             // begin loop
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
+            // get `string Representation` of `currentPerson`
+            // append `stringRepresentation` to `result` variable
             // end loop
-
+        }
         return result;
     }
 
